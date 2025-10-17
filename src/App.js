@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import TodoApp from "./components/TodoApp";
+import "./App.css";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <div className="todo-wrapper">
+        <header>
+          <h1>Smart · Pretty · Todo</h1>
+          <p>A clean todo app with smart parsing, tags & priorities.</p>
+        </header>
+        <main>
+          <TodoApp />
+        </main>
+        <footer>Made with ❤️ — Smart Pretty Todo</footer>
+      </div>
     </div>
   );
 }
-
-export default App;
